@@ -14,6 +14,8 @@ class binarySearchTree:
     def insert(self, word):
         if self.root is None:
             self.root = BSTNode(word)
+        else:
+            self._insert(self.root, word)
 
 # mas se tiver raiz  e for menor que a raiz insere na esquerda 
 # e se for maior insere na direita
@@ -28,7 +30,7 @@ class binarySearchTree:
             if current.right is None:
                 current.right = BSTNode(word)
             else:
-                self.insert(current.right, word)
+                self._insert(current.right, word)
                 
 # Busca na árvore
 
@@ -36,7 +38,7 @@ class binarySearchTree:
         return self._search(self.root, word)
     
     def _search(self, current, word):
-        if current in None:
+        if current is None:
             return False
         if word == current.word:
             return True
