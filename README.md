@@ -13,6 +13,6 @@
 
 
 ## Pré-requisitos
-
+- Python 3.10+
 
 ## Instalação
