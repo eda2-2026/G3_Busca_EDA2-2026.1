@@ -4,7 +4,7 @@ from src.autocomplete import autocomplete
 
 
 def main():
-    tree = load_dictionary("data/palavras.txt")
+    tree = load_dictionary("data/words.txt")
 
     word = input("Digite a palavra/prefixo a ser procurada: ")
     suggestions = autocomplete(tree, word, limit=5)

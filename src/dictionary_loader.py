@@ -19,7 +19,25 @@ def load_dictionary(file_path: str) -> binarySearchTree:
     Retorna a árvore binária de busca preenchida com todas as
     palavras encontradas no arquivo.
     """
+
+    def _insert_balanced(
+        tree: binarySearchTree, words: list[str], start: int, end: int
+    ) -> None:
+        """Insere palavras no meio de cada intervalo para manter a BST balanceada."""
+        if start > end:
+            return
+
+        mid = (start + end) // 2  # divisão inteira
+        tree.insert(words[mid])
+        _insert_balanced(tree, words, start, mid - 1)
+        _insert_balanced(tree, words, mid + 1, end)
+
     tree = binarySearchTree()
-    for word in load_words(file_path):
-        tree.insert(word)
+
+    # Evita árvore degenerada quando o arquivo já vem ordenado.
+    unique_sorted_words = sorted(set(load_words(file_path)))
+    _insert_balanced(
+        tree, unique_sorted_words, 0, len(unique_sorted_words) - 1
+    )  # começo da recursão
+
     return tree
