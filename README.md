@@ -60,3 +60,19 @@ python3 -m pytest tests/test_bst.py
 ```
 
 ## Video
+
+https://youtu.be/GR3JD_T6aZA
+
+<div align="center">
+  <a href="https://youtu.be/GR3JD_T6aZA">
+    <img src="https://img.youtube.com/vi/GR3JD_T6aZA/0.jpg" width="50%">
+  </a>
+</div>
+
+<p align="center">
+  <b>Autorer:</b>
+  <a href="https://github.com/rayenealmeida">Rayene Almeida</a> e 
+  <a href="https://github.com/enzo-fb">Enzo Fernandes</a>
+</p>
+
+
